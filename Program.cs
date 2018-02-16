@@ -13,7 +13,7 @@ namespace NumbersToWords
             string aa = Console.ReadLine();
             int number = Convert.ToInt32(aa);
 
-            string[] erteuli = { "nuli", "erit", "ori", "sami", "otxi", "xuti", "eqvsi", "shvidi", "rva", "cxra", "ati", "tertmeti", "tormeti", "cameti", "totxmeti", "txutmeti", "teqvsmeti", "chvidmeti", "tvrameti", "cxrameti", "oci" };
+            string[] erteuli = { "nuli", "erti", "ori", "sami", "otxi", "xuti", "eqvsi", "shvidi", "rva", "cxra", "ati", "tertmeti", "tormeti", "cameti", "totxmeti", "txutmeti", "teqvsmeti", "chvidmeti", "tvrameti", "cxrameti", "oci" };
             string[] oceuli = { "ocda", "", "orm", "sam", "otxm", "oci" };
             string[] samaseuli = { "as", "", "or", "sam", "otx", "xut", "eqvs", "shvid", "rva", "cxra", "asi" };
             string[] ataseuli = { "atas", "atasi" };
