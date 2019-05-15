@@ -1,5 +1,6 @@
 # NumberToWord
 Numbers to words converter(Georgian)
+რიცხვი სიტყვიერად - ქართულად!
 
 524
 xutas ocdaotxi
