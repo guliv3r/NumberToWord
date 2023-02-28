@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	  <Product>Gulivera.NumberToWord</Product>
+	  <Description>
+		  This class can convert Number to Georgian word.(GEO, KA); Usage: Converter.Execute(123456);
+	  </Description>
+	  <PackageTags>convert gerorgian number to word, რიცხვი სიტყვიერად, კონვერტაცია რიცხვის სიტყვიერად</PackageTags>
+	  <Copyright>Copyright © Gulivera.net 2023</Copyright>
+	  <PackageLicenseUrl>https://gulivera.net</PackageLicenseUrl>
+	  <PackageProjectUrl>https://github.com/guliv3r/NumberToWord</PackageProjectUrl>
+	  <PackageIconUrl>https://gulivera.net/icon.png</PackageIconUrl>
+	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Company>Gulivera.Net</Company>
+	  <AssemblyVersion>1.1.1.0</AssemblyVersion>
+	  <Version>1.0.1</Version>  
+  </PropertyGroup>
+
+</Project>

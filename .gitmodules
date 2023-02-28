@@ -1,0 +1,3 @@
+[submodule "Tera.Common"]
+	path = Tera.Common
+	url = https://github.com/Gabina12/Tera.Common.git
