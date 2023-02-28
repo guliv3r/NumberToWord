@@ -18,8 +18,8 @@ Install-Package Gulivera.NumberToWord
 ```csharp
 using Gulivera.NumberToWord;
 
-var resp = Converter.Execute(123456);
+var resp = Converter.Execute(123456, "GEL");
 
-Console.WriteLine(resp);//ას ოცდასამი ათას ოთხას ორმოცდათექვსმეტი
+Console.WriteLine(resp);//ას ოცდასამი ათას ოთხას ორმოცდათექვსმეტი ლარი
 
 ```
