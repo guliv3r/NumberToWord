@@ -9,7 +9,7 @@
 	  <PackageTags>convert gerorgian number to word, რიცხვი სიტყვიერად, კონვერტაცია რიცხვის სიტყვიერად</PackageTags>
 	  <Copyright>Copyright © Gulivera.net 2023</Copyright>
 	  <PackageLicenseUrl>https://gulivera.net</PackageLicenseUrl>
-	  <PackageProjectUrl>https://gulivera.net</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/guliv3r/NumberToWord</PackageProjectUrl>
 	  <PackageIconUrl>https://gulivera.net/icon.png</PackageIconUrl>
 	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
