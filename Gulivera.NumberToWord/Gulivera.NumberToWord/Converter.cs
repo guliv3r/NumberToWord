@@ -10,15 +10,44 @@ namespace Gulivera.NumberToWord
         readonly static string[] ataseuli = { "ათას", "ათასი" };
         readonly static string[] milioni = { "მილიონ", "მილიონი" };
 
-        public static string Execute(decimal number)
+        public static string Execute(double number, string ccy)
         {
-            return NumberToWord(number);
+            string res = string.Empty;
+            if (number != (int)number)
+            {
+                var arr = number.ToString().Split('.');
+                res = $"{NumberToWord(Convert.ToInt32(arr[0]))} {GetCcy(ccy, false)} და ";
+                res += $"{NumberToWord(Convert.ToInt32(arr[1]))} {GetCcy(ccy, true)}";
+            }
+            else res = $"{NumberToWord(Convert.ToInt32(number))} {GetCcy(ccy, false)}";
+
+            return res;
         }
 
-        private static string NumberToWord(decimal n)
+        private static string GetCcy(string ccy, bool isCoin)
+        {
+            switch (ccy.ToUpper())
+            {
+                case "GEL":
+                    if (isCoin) return "თეთრი";
+                    return "ლარი";
+                case "USD":
+                    if (isCoin) return "ცენტი";
+                    return "აშშ დოლარი";
+                case "EUR":
+                    if (isCoin) return "ცენტი";
+                    return "ევრო";
+                case "RUB":
+                    if (isCoin) return "კაპიკი";
+                    return "რუსული რუბლი";
+                default: return ccy;
+            }
+        }
+
+        private static string NumberToWord(int n)
         {
             if (n > -1)
-                return Div10000(Convert.ToInt32(n));
+                return Div10000(n);
             return "0";
         }
 
