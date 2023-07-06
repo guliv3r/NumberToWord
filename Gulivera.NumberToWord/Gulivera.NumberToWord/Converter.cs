@@ -12,7 +12,7 @@ namespace Gulivera.NumberToWord
         readonly static string[] milioni = { "მილიონ", "მილიონი" };
         readonly static string[] miliard = { "მილიარდ", "მილიარდი" };
 
-        public static string Execute(decimal number, OptionType opt)
+        public static string Execute(decimal number, OptionType opt, bool printZero = true)
         {
             string res = string.Empty;
 
@@ -22,13 +22,13 @@ namespace Gulivera.NumberToWord
                 number *= -1;
             }
 
-            if (number != (int)number)
+            if (number != (int)number || printZero)
             {
                 var arr = number.ToString("G", CultureInfo.InvariantCulture).Split('.');
                 res += $"{NumberToWord(Convert.ToInt32(arr[0]))} {GetCcy(opt, false)} და ";
                 res += $"{NumberToWord(Convert.ToInt32(arr[1]))} {GetCcy(opt, true)}";
             }
-            else res += $"{NumberToWord(Convert.ToInt32(number))} {GetCcy(opt, false, opt == OptionType.Percent ? true : false)}";
+            else  res += $"{NumberToWord(Convert.ToInt32(number))} {GetCcy(opt, false, opt == OptionType.Percent ? true : false)}";
 
             return res;
         }
@@ -106,13 +106,13 @@ namespace Gulivera.NumberToWord
                     return "ლარი";
                 case OptionType.USD:
                     if (isCoin) return "ცენტი";
-                    return "აშშ დოლარი";
+                    return "დოლარი";
                 case OptionType.EUR:
                     if (isCoin) return "ცენტი";
                     return "ევრო";
                 case OptionType.GBP:
                     if (isCoin) return "ცენტი";
-                    return "ევრო";
+                    return "გირვანქა";
                 case OptionType.Percent:
                     if(isInteger || isCoin)  return "პროცენტი";
                     return "მთელი";

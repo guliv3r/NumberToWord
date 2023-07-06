@@ -1,8 +1,8 @@
 ﻿using Gulivera.NumberToWord;
 
 
-decimal number = 1234.50M;
-var resp = Converter.Execute(number, Converter.OptionType.GEL);
+decimal number = 94.00M;
+var resp = Converter.Execute(number, Converter.OptionType.GEL, true);
 
 Console.WriteLine(resp);
 Console.ReadKey();
