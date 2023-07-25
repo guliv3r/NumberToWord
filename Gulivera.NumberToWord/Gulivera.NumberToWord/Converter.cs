@@ -12,8 +12,18 @@ namespace Gulivera.NumberToWord
         readonly static string[] milioni = { "მილიონ", "მილიონი" };
         readonly static string[] miliard = { "მილიარდ", "მილიარდი" };
 
-        public static string Execute(decimal number, OptionType opt, bool printZero = true)
+        public static string Execute(decimal number, string operationType, bool printZero = true)
         {
+            OptionType opt;
+            try
+            {
+                opt = (OptionType)Enum.Parse(typeof(OptionType), operationType, true);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Incorrect Parametr: OperationType");
+            }
+
             string res = string.Empty;
 
             if (number < 0)
